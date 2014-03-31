@@ -1,0 +1,253 @@
+/* ==========================================================================
+							M A I N  ___  S T Y L E S
+   ========================================================================== */
+
+html, body {
+	height: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* Helper classes  */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* Main Blocks
+ -------------------------------------------------------------------------------- */
+#wrapper {
+	height: auto !important;
+    min-height: 100%;
+}
+.inner {
+	width: 920px;
+	margin: 0 auto;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+	height: 100px;
+	background: url(../images/header_bg.jpg) 0 0 repeat-x;
+	border-bottom: 4px solid #fff;
+    overflow: hidden;
+}
+nav.menu_container {
+    padding: 50px 0 0;
+}
+nav.menu_container ul.menu {
+    display: table;
+    width: 100%;
+}
+nav.menu_container .menu li {
+    display: table-cell;
+    text-align: center;
+    border-left: 2px solid #047447;
+    margin: 0 0 15px; 
+}
+nav.menu_container .menu li a {
+    display: block;
+    height: 14px;
+    line-height: 14px;
+}
+nav.menu_container .menu li a:hover {
+    text-decoration: none;
+    color: #047447;
+}
+nav.menu_container .menu li:first-child {
+    border: none; 
+}
+nav.menu_container .menu li.current_page_item a {
+    color: #047447; 
+}
+.mobile_menu_toggle {
+    display: none;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#middle {
+	overflow: hidden;
+    min-height: 300px;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+	background: #000;
+	height: 83px;
+	position: relative;
+    margin: -83px auto 0;
+	border: 1px dotted #ccc;
+}
+#footer .inner {
+	background: #0c0c0c;
+}
+.h_footer {
+	height: 83px;
+}
+
+
+
+/* Responsive
+-----------------------------------------------------------------------------*/
+
+@media screen and (max-width: 575px) {
+
+    #header {
+        overflow: visible;
+    }
+    .inner {
+        width: 100%;
+        position: relative;
+    }
+
+    nav.menu_container {
+        padding: 10px 0 0;
+        position: absolute;
+        left: -250px;
+        top: -10px;
+        z-index: 100;
+        float: none;
+        text-align: center;
+        background: #eeeeee;
+    }
+    nav.menu_container ul#menu-top-menu {
+        display: block;
+        text-align: left;
+        border: none;
+        width: 250px; 
+        padding: 30px 0 0;
+    }
+    nav.menu_container ul#menu-top-menu li {
+        display: block;
+        text-align: left;
+        border: none; 
+    }
+    nav.menu_container ul#menu-top-menu li a {
+        display: inline-block;
+        width: 95%;
+        padding: 2% 0 2% 5%;
+        color: black;
+        font-size: 17px; 
+    }
+    .mobile_menu_toggle {
+        background: url("../images/menu-icon.png") no-repeat 95% center;
+        display: inline-block;
+        height: 34px;
+        position: absolute;
+        right: -50px;
+        top: 18px;
+        width: 226px;
+        cursor: pointer;
+        z-index: 100;
+        text-align: left;
+        font-size: 17px;
+        line-height: 34px;
+        text-indent: -9999px; 
+    }
+    .mobile_menu_toggle.open {
+      right: 10px;
+      text-indent: 0px; 
+    }
+}
